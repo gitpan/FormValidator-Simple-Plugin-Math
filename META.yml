@@ -1,6 +1,6 @@
 --- #YAML:1.0
 name:                FormValidator-Simple-Plugin-Math
-version:             0.01
+version:             0.02
 abstract:            Math evaluation for FormValidator::Simple
 license:             ~
 generated_by:        ExtUtils::MakeMaker version 6.31
