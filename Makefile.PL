@@ -1,16 +1,7 @@
-use strict;
-use warnings;
-use ExtUtils::MakeMaker;
-
-WriteMakefile(
-    NAME                => 'FormValidator::Simple::Plugin::Math',
-    AUTHOR              => 'Yusuke Sugiyama <ally@blinkingstar.net>',
-    VERSION_FROM        => 'lib/FormValidator/Simple/Plugin/Math.pm',
-    ABSTRACT_FROM       => 'lib/FormValidator/Simple/Plugin/Math.pm',
-    PL_FILES            => {},
-    PREREQ_PM => {
-        'Test::More' => 0,
-    },
-    dist                => { COMPRESS => 'gzip -9f', SUFFIX => 'gz', },
-    clean               => { FILES => 'FormValidator-Simple-Plugin-Math-*' },
-);
+use inc::Module::Install;
+name    'FormValidator-Simple-Plugin-Math';
+all_from       'lib/FormValidator/Simple/Plugin/Math.pm';
+requires 'Test::More' => 0;
+requires 'FormValidator::Simple::Constants' => 0;
+requires 'Math::Expression' => 0;
+WriteAll;
